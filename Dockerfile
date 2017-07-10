@@ -8,7 +8,7 @@ ENV PATH $NVM_DIR/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 
 RUN dpkg --add-architecture i386
 RUN apt update -qq
-RUN apt install --no-install-recommends -y wget python rpm g++-multilib libxss-dev build-essential pkg-config libx11-dev:i386 libxext-dev:i386 libxss-dev:i386 libssl-dev ca-certificates snapcraft
+RUN apt install --no-install-recommends -y wget python rpm g++-multilib libxss-dev build-essential pkg-config libx11-dev:i386 libxext-dev:i386 libxss-dev:i386 libssl-dev ca-certificates snapcraft locales
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 RUN echo 'source $NVM_DIR/nvm.sh' >> /etc/profile
 RUN /bin/bash -l -c "nvm install 6"
