@@ -12,7 +12,7 @@ RUN apt install --no-install-recommends -y wget python rpm g++-multilib libxss-d
 RUN wget -qO- https://yarnpkg.com/latest.tar.gz | tar xvz && mv dist /yarn
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 RUN echo 'source $NVM_DIR/nvm.sh' >> /etc/profile
-RUN /bin/bash -l -c "nvm install 6"
+RUN /bin/bash -l -c "nvm install 9"
 
 WORKDIR /project
 
