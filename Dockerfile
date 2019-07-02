@@ -11,7 +11,7 @@ RUN apt update -qq
 RUN apt install --no-install-recommends -y wget python rpm g++-multilib libxss-dev build-essential pkg-config libx11-dev:i386 libxext-dev:i386 libxss-dev:i386 libssl-dev ca-certificates snapcraft locales
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 RUN echo 'source $NVM_DIR/nvm.sh' >> /etc/profile
-RUN /bin/bash -l -c "nvm install 9"
+RUN /bin/bash -l -c "nvm install 10"
 RUN mkdir yarn && wget -qO- https://yarnpkg.com/latest.tar.gz | tar xvz -C yarn && mv ./yarn/* /opt/yarn
 
 WORKDIR /project
